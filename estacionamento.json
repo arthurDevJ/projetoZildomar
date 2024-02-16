@@ -1,0 +1,72 @@
+[
+    {
+        "marca": "Toyota",
+        "modelo": "Corolla",
+        "ano": 2020,
+        "vaga": "15",
+        "tipo_vaga": "Cadeirante"
+    },
+    {
+        "marca": "Honda",
+        "modelo": "Civic",
+        "ano": 2016,
+        "vaga": "10",
+        "tipo_vaga": "Normal"
+    },
+    {
+        "marca": "Fiat",
+        "modelo": "Palio",
+        "ano": 2015,
+        "vaga": "18",
+        "tipo_vaga": "Idoso"
+    },
+    {
+        "marca": "Hyundai",
+        "modelo": "HB20",
+        "ano": 2019,
+        "vaga": "21",
+        "tipo_vaga": "Normal"
+    },
+    {
+        "marca": "Nissan",
+        "modelo": "Versa",
+        "ano": 2017,
+        "vaga": "30",
+        "tipo_vaga": "Idoso"
+    },
+    {
+        "marca": "Renault",
+        "modelo": "Kwid",
+        "ano": 2021,
+        "vaga": "7",
+        "tipo_vaga": "Normal"
+    },
+    {
+        "marca": "Kia",
+        "modelo": "Sportage",
+        "ano": 2018,
+        "vaga": "3",
+        "tipo_vaga": "Cadeirante"
+    },
+    {
+        "marca": "Peugeot",
+        "modelo": "208",
+        "ano": 2016,
+        "vaga": "14",
+        "tipo_vaga": "Normal"
+    },
+    {
+        "marca": "BMW",
+        "modelo": "Serie 3",
+        "ano": 2020,
+        "vaga": "29",
+        "tipo_vaga": "Idoso"
+    },
+    {
+        "marca": "Mercedes-Benz",
+        "modelo": "Classe A",
+        "ano": 2019,
+        "vaga": "9",
+        "tipo_vaga": "Normal"
+    }
+]
