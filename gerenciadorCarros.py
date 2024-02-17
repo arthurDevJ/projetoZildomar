@@ -31,11 +31,11 @@ def main():
             print("Carro excluído com sucesso.")
         elif escolha == "3":
             indice = int(input("Índice do carro a ser editado: "))
-            marca = input("Marca do carro: ").capitalize()
-            modelo = input("Modelo do carro: ").capitalize()
-            ano = int(input("Ano do carro: "))
-            vaga = int(input("Número da vaga: "))
-            tipo_vaga = input("Tipo de vaga (normal, idoso, cadeirante): ").capitalize()
+            marca = input("Nova marca do carro: ").capitalize()
+            modelo = input("Novo modelo do carro: ").capitalize()
+            ano = int(input("Novo ano do carro: "))
+            vaga = int(input("Novo número de vaga: "))
+            tipo_vaga = input("Novo tipo de vaga (Normal, idoso ou cadeirante): ").capitalize()
             novo_carro = {"marca": marca, "modelo": modelo, "ano": ano, "vaga": vaga, "tipo_vaga": tipo_vaga}
             editar_carro(carros, indice - 1, novo_carro)
             salvar_carros(carros, arquivo_carros)
