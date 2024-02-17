@@ -1,35 +1,4 @@
-import json
-
-# Função para carregar os dados do estacionamento do arquivo JSON
-def carregar_carros(nome_arquivo):
-    try:
-        with open(nome_arquivo, 'r') as arquivo:
-            return json.load(arquivo)
-    except FileNotFoundError:
-        return []
-
-# Função para salvar os dados do estacionamento no arquivo JSON
-def salvar_carros(carros, nome_arquivo):
-    with open(nome_arquivo, 'w') as arquivo:
-        json.dump(carros, arquivo, indent=4)
-
-# Função para adicionar um novo carro ao estacionamento
-def adicionar_carro(carros, carro):
-    carros.append(carro)
-
-# Função para excluir um carro do estacionamento pelo índice
-def excluir_carro(carros, indice):
-    if 0 <= indice < len(carros):
-        del carros[indice]
-    else:
-        print("Índice inválido.")
-
-# Função para editar um carro no estacionamento pelo índice
-def editar_carro(carros, indice, novo_carro):
-    if 0 <= indice < len(carros):
-        carros[indice] = novo_carro
-    else:
-        print("Índice inválido.")
+from loadAndDeload import *
 
 # Função principal
 def main():
@@ -46,11 +15,11 @@ def main():
         escolha = input("\nEscolha uma opção: ")
 
         if escolha == "1":
-            marca = input("Marca do carro: ")
-            modelo = input("Modelo do carro: ")
+            marca = input("Marca do carro: ").capitalize()
+            modelo = input("Modelo do carro: ").capitalize()
             ano = int(input("Ano do carro: "))
-            vaga = input("Número da vaga: ")
-            tipo_vaga = input("Tipo de vaga (normal, idoso, cadeirante): ").lower()
+            vaga = int(input("Número da vaga: "))
+            tipo_vaga = input("Tipo de vaga (normal, idoso, cadeirante): ").capitalize()
             novo_carro = {"marca": marca, "modelo": modelo, "ano": ano, "vaga": vaga, "tipo_vaga": tipo_vaga}
             adicionar_carro(carros, novo_carro)
             salvar_carros(carros, arquivo_carros)
@@ -62,11 +31,11 @@ def main():
             print("Carro excluído com sucesso.")
         elif escolha == "3":
             indice = int(input("Índice do carro a ser editado: "))
-            marca = input("Nova marca do carro: ")
-            modelo = input("Novo modelo do carro: ")
-            ano = int(input("Novo ano do carro: "))
-            vaga = input("Novo número da vaga: ")
-            tipo_vaga = input("Novo tipo de vaga (normal, idoso, cadeirante): ").lower()
+            marca = input("Marca do carro: ").capitalize()
+            modelo = input("Modelo do carro: ").capitalize()
+            ano = int(input("Ano do carro: "))
+            vaga = int(input("Número da vaga: "))
+            tipo_vaga = input("Tipo de vaga (normal, idoso, cadeirante): ").capitalize()
             novo_carro = {"marca": marca, "modelo": modelo, "ano": ano, "vaga": vaga, "tipo_vaga": tipo_vaga}
             editar_carro(carros, indice - 1, novo_carro)
             salvar_carros(carros, arquivo_carros)
@@ -81,5 +50,5 @@ def main():
         else:
             print("Opção inválida. Por favor, escolha novamente.")
 
-if __name__ == "__main__":
-    main()
+
+main()
